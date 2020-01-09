@@ -139,7 +139,7 @@ long __stdcall Hooks::EndScene(IDirect3DDevice9* pDevice)
         ImGuiIO& io = ImGui::GetIO();
 
         g::menuFont = io.Fonts->AddFontFromMemoryCompressedTTF(verdana_compressed_data, verdana_compressed_size, 12, NULL, io.Fonts->GetGlyphRangesCyrillic());
-        g::tabFont = io.Fonts->AddFontFromMemoryCompressedTTF(cherryfont_compressed_data, cherryfont_compressed_size, 45, NULL, io.Fonts->GetGlyphRangesCyrillic());
+        g::tabFont = io.Fonts->AddFontFromMemoryCompressedTTF(cherryfont_compressed_data, cherryfont_compressed_size, 40, NULL, io.Fonts->GetGlyphRangesCyrillic());
         g::controlFont = io.Fonts->AddFontFromMemoryCompressedTTF(comboarrow_compressed_data, comboarrow_compressed_size, 12, NULL, io.Fonts->GetGlyphRangesCyrillic());
         g::boldMenuFont = io.Fonts->AddFontFromMemoryCompressedTTF(verdanab_compressed_data, verdanab_compressed_size, 11, NULL, io.Fonts->GetGlyphRangesCyrillic());
 
