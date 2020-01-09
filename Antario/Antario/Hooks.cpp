@@ -156,8 +156,6 @@ long __stdcall Hooks::EndScene(IDirect3DDevice9* pDevice)
     if (g_Menu.bMenuOpened)
         g_Menu.Render();
 
-    g_InputSystem->EnableInput(!g_Menu.bMenuOpened);
-
     ImGui::Render();
     ImGui_ImplDX9_RenderDrawData(ImGui::GetDrawData());
 
