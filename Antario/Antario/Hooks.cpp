@@ -120,7 +120,7 @@ long __stdcall Hooks::EndScene(IDirect3DDevice9* pDevice)
     pDevice->SetSamplerState(NULL, D3DSAMP_ADDRESSW, D3DTADDRESS_WRAP);
     pDevice->SetSamplerState(NULL, D3DSAMP_SRGBTEXTURE, NULL);
 
-    if (!g_Menu.done)
+    if (!g_Hooks.bInitializedDrawManager)
     {
         IDirect3DSwapChain9* chain = nullptr;
         D3DPRESENT_PARAMETERS pp;
@@ -146,7 +146,7 @@ long __stdcall Hooks::EndScene(IDirect3DDevice9* pDevice)
         if (g::menuBg == nullptr)
             D3DXCreateTextureFromFileInMemoryEx(pDevice, &menuBackground, sizeof(menuBackground), 1000, 1000, D3DUSAGE_DYNAMIC, 0, D3DFMT_X8B8G8R8, D3DPOOL_DEFAULT, D3DX_DEFAULT, D3DX_DEFAULT, 0, NULL, NULL, &g::menuBg);
 
-        g_Menu.done = true;
+        g_Hooks.bInitializedDrawManager = true;
     }
 
     ImGui_ImplDX9_NewFrame();
