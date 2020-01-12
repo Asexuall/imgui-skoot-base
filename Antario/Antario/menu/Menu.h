@@ -8,8 +8,6 @@ public:
 	void Render();
 	void Shutdown();
 	bool bMenuOpened;
-	bool done;
-
 private:
 	void ColorPicker(const char* name, float* color, bool alpha);
 
